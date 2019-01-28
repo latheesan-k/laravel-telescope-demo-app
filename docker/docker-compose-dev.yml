@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+
+  laravel-telescope-demo-app-web:
+    container_name: laravel-telescope-demo-app-web
+    mem_limit: 512M
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "20000:80"
+    volumes:
+      - ../laravel:/app:cached
+    command: /bin/bash -c /run/laravel-telescope-demo-app-web.sh
