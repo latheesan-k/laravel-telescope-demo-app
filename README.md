@@ -1,7 +1,7 @@
 # laravel-telescope-demo-app
 Simple app demonstrating all the capabilities of telescope package for laravel 5.7
 
-# How to build docker?
+# How to build the app?
 > make rebuild
 
 # How to test the app?
