@@ -51,6 +51,17 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="p-1 mt-1 btn btn-primary btn-sm" href="/home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="p-1 ml-1 mt-1 btn btn-primary btn-sm" href="/users">Users</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="p-1 ml-1 mt-1 btn btn-primary btn-sm" href="/posts">Posts</a>
+                            </li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
