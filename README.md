@@ -18,3 +18,8 @@ http://localhost:20000
 ```
 http://localhost:20000/telescope
 ```
+
+> phpLiteAdmin (Online Sqlite Database Manager), _password is: admin_
+```
+http://localhost:20000/phpliteadmin
+```
