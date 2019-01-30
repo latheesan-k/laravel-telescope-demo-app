@@ -2,6 +2,7 @@ rebuild:
 	@docker-compose -f docker/docker-compose-dev.yml down --remove-orphans
 	@docker-compose -f docker/docker-compose-dev.yml up -d --build
 	@docker exec laravel-telescope-demo-app-web composer install --prefer-dist --no-suggest
+	@docker exec laravel-telescope-demo-app-web php artisan migrate:fresh --seed
 
 down:
 	@docker-compose -f docker/docker-compose-dev.yml down --remove-orphans
