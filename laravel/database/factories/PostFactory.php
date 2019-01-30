@@ -9,7 +9,7 @@ $factory->define(Post::class, function (Faker $faker) {
         'user_id' => function() {
             return factory(User::class)->create()->id;
         },
-        'title' => $faker->title,
-        'body' => $faker->paragraph()
+        'title' => $faker->sentence,
+        'body' => implode(PHP_EOL . PHP_EOL, [$faker->paragraph(), $faker->paragraph(), $faker->paragraph()])
     ];
 });
