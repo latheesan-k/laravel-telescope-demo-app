@@ -14,6 +14,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Posts</th>
                                 <th scope="col">Member Since</th>
                                 <th scope="col">Action</th>
                             </tr>
@@ -24,6 +25,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->posts->count() }}</td>
                                     <td>{{ $user->created_at->diffForHumans() }}</td>
                                     <td><a class="btn btn-sm btn-primary" href="/users/{{ $user->id }}">View</a></td>
                                 </tr>
