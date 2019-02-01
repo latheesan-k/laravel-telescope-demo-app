@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\InvoicePaid;
 use App\Jobs\SomeJob;
+use App\Notifications\PostCreated;
 use App\User;
 
 class DemoController extends Controller
@@ -49,5 +50,15 @@ class DemoController extends Controller
         event(new InvoicePaid($user));
 
         return 'InvoicePaid event fired.';
+    }
+
+    public function notifications()
+    {
+        $user = User::where('id', 9)->first();
+        $lastPost = $user->posts->last();
+
+        $user->notify(new PostCreated($lastPost));
+
+        return 'PostCreated notification sent.';
     }
 }

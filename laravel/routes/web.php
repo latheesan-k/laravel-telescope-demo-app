@@ -23,4 +23,5 @@ Route::prefix('demo')->group(function() {
     Route::get('dumps', 'DemoController@dumps');
     Route::get('models', 'DemoController@models');
     Route::get('events', 'DemoController@events');
+    Route::get('notifications', 'DemoController@notifications');
 });
