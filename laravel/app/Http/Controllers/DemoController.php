@@ -6,6 +6,7 @@ use App\Events\InvoicePaid;
 use App\Jobs\SomeJob;
 use App\Notifications\PostCreated;
 use App\User;
+use Illuminate\Support\Facades\Cache;
 
 class DemoController extends Controller
 {
@@ -60,5 +61,12 @@ class DemoController extends Controller
         $user->notify(new PostCreated($lastPost));
 
         return 'PostCreated notification sent.';
+    }
+
+    public function cache()
+    {
+        return Cache::remember('user5', 1, function() {
+            return User::where('id', 5)->first();
+        });
     }
 }
