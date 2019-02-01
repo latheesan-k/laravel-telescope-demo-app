@@ -31,4 +31,13 @@ class DemoController extends Controller
 
         return 'I have dumped stuff 💩';
     }
+
+    public function models()
+    {
+        $user = User::where('id', 4)->first();
+        $user->posts()->delete();
+        $user->delete();
+
+        return 'User with id #4 and their posts have been deleted.';
+    }
 }
