@@ -16,3 +16,7 @@ Route::group(['middleware' => ['auth']], function()
     Route::get('/posts', 'PostsController@index');
     Route::get('/posts/{post_id}', 'PostsController@show');
 });
+
+Route::prefix('demo')->group(function() {
+    Route::get('jobs/{count}', 'DemoController@jobs');
+});
