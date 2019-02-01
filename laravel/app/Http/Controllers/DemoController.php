@@ -22,4 +22,13 @@ class DemoController extends Controller
     {
         throw new \BadFunctionCallException('Example exception - just ignore it :P');
     }
+
+    public function dumps()
+    {
+        $user = User::where('id', 2)->with('posts')->first();
+
+        dump($user->toArray());
+
+        return 'I have dumped stuff 💩';
+    }
 }

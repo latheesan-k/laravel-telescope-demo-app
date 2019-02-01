@@ -20,4 +20,5 @@ Route::group(['middleware' => ['auth']], function()
 Route::prefix('demo')->group(function() {
     Route::get('jobs/{count}', 'DemoController@jobs');
     Route::get('exceptions', 'DemoController@exceptions');
+    Route::get('dumps', 'DemoController@dumps');
 });
