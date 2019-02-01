@@ -17,4 +17,9 @@ class DemoController extends Controller
 
         return sprintf('Dispatched %d SomeJob', $count);
     }
+
+    public function exceptions()
+    {
+        throw new \BadFunctionCallException('Example exception - just ignore it :P');
+    }
 }
