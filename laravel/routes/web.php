@@ -22,4 +22,5 @@ Route::prefix('demo')->group(function() {
     Route::get('exceptions', 'DemoController@exceptions');
     Route::get('dumps', 'DemoController@dumps');
     Route::get('models', 'DemoController@models');
+    Route::get('events', 'DemoController@events');
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\InvoicePaid;
 use App\Jobs\SomeJob;
 use App\User;
 
@@ -39,5 +40,14 @@ class DemoController extends Controller
         $user->delete();
 
         return 'User with id #4 and their posts have been deleted.';
+    }
+
+    public function events()
+    {
+        $user = User::where('id', 7)->first();
+
+        event(new InvoicePaid($user));
+
+        return 'InvoicePaid event fired.';
     }
 }
