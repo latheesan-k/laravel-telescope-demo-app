@@ -15,6 +15,7 @@ RUN apk add \
         php7-dom \
         php7-mbstring \
         php7-pdo_mysql \
+        php7-pdo_sqlite \
         php7-session \
         php7-sockets \
         php7-tokenizer \
